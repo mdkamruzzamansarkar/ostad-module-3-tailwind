@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ostad-Module-3-Tailwind</title>
+  <meta name="description" content="Pixelab creative services landing page">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { ink: '#0d2038',
+     orange: '#ff5b0a', mist: '#f7f8fa' }, fontFamily: { sans: ['DM Sans',
+      'sans-serif'], display: ['Outfit', 'sans-serif'] } } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="font-sans text-slate-900 antialiased">
+  <!-- 1. Header -->
+  <header class="mx-auto flex w-[min(1170px,calc(100%-40px))] items-center justify-between py-6">
+    <a class="brand" href="#home" aria-label="Pixelab home">
+      <img class="brand-image" src="img/logo.png" alt="Pixelab logo">
+    </a>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm md:flex" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about"><b>About Us</b></a>
+      <a href="#services"><b>Our App</b></a>
+      <a href="#contact"><b>Contacts</b></a>
+    </nav>
+    <div class="hidden items-center gap-5 text-sm sm:flex">
+      <a href="#contact">Log In</a>
+      <a class="rounded-lg bg-orange px-5 py-2 text-white" href="#contact">Sign Up</a>
+    </div>
+    <details class="mobile-nav md:hidden">
+      <summary aria-label="Open page sections">☰</summary>
+      <div class="mobile-nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our App</a>
+        <a href="#contact">Contacts</a>
+        <a href="#contact">Log In / Sign Up</a>
+      </div>
+    </details>
+  </header>
+
+  <main>
+    <!-- 2. Hero / first screen -->
+    <section id="home" class="hero mx-auto grid w-[min(1170px,calc(100%-40px))] items-center gap-5 py-12 md:min-h-[600px] md:grid-cols-2 md:py-16">
+      <div class="relative z-10">
+        <h1 class="max-w-[620px] font-display text-5xl font-extrabold leading-[1.02] 
+            tracking-[-.045em] text-ink sm:text-6xl lg:text-[72px]">
+            We boost<br> growth for your<br> startup business
+       </h1>
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-slate-800 sm:text-lg">
+          <b>Our goal is to be at the forefront of the creativity services
+             industry as a digital creator. In has a positive impact
+          </b>
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-6">
+          <a class="rounded-lg bg-orange px-7 py-3.5 text-sm font-semibold text-white shadow-lg 
+          shadow-orange/20" href="#services">
+          Get Started
+        </a>
+          <a class="flex items-center gap-3 text-sm" href="#about">
+            <span class="play-icon">▶</span>Learn More</a>
+        </div>
+      </div>
+      <div class="hero-picture relative mx-auto mt-7 w-full max-w-[530px] md:mt-0">
+        <span class="hero-orb" aria-hidden="true"></span>
+        <!-- IMAGE 1 (hero): paste the Figma person's image URL below -->
+        <img class="hero-person" src="img/img hero section .png" alt="Person using a phone, from the Figma design" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="hero-fallback" hidden>
+          <span class="fallback-head"></span>
+          <span class="fallback-body"></span>
+          <span class="fallback-phone">▯</span>
+        </div>
+        <div class="hero-note note-top">
+          <b class="metric-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 17l5-5 4 3 7-8"></path>
+              <path d="M15 7h5v5"></path>
+            </svg>
+          </b>
+          <span>100% Business Growth<br><small>★ 4.9 (1520 Reviews)</small></span>
+        </div>
+        <div class="hero-note note-bottom">
+          <b>★</b>
+          <span>1,000,000 Happy Clients<br>
+            <small>★ 4.9 &nbsp; (15k Reviews)</small>
+          </span>
+        </div>
+
+        <svg class="hero-doodle bulb" viewBox="0 0 80 100" aria-hidden="true"><path d="M40 16a21 21 0 0 0-13 38c4 3 5 8 5 12h16c0-4 1-9 5-12A21 21 0 0 0 40 16Z"/><path d="M33 71h14m-12 7h10m-8 7h6M40 4V0M15 14l-5-5m50 5 5-5M8 39H1m70 0h7M23 60l-5 5m44-5 5 5"/></svg>
+
+        <svg class="hero-arrow" viewBox="0 0 90 75" aria-hidden="true">
+          <path d="M82 68 C75 30 53 8 16 9"/>
+          <path d="M28 3 L15 9 L24 20"/>
+        </svg>
+    </section>
+
+    <!-- 3. Our Vision & Our Goal: service cards -->
+
+    <section id="about" class="mx-auto w-[min(1000px,calc(100%-40px))] py-14 md:py-20">
+      <div class="mb-10 text-center">
+        <p class="section-kicker">SERVICE</p>
+        <h2 class="section-title">Our Vison & Our Goal</h2>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="service-card">
+          <span class="service-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="m8 34 11-12 8 6 13-17M30 11h10v10"/>
+            </svg>
+          </span>
+          <h3>Graphic Design</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Quisque dui mi, bibendum eu erat id, ultricies semper metus. 
+            Nunc dapibus laoreet dolor nec imperdiet.</p>
+          <a class="card-button" href="#contact">Learn</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="7" y="13" width="25" height="22" rx="5"/>
+              <path d="m32 20 9-5v18l-9-5z"/>
+            </svg>
+          </span>
+          <h3>Video Editing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Quisque dui mi, bibendum eu erat id, ultricies semper metus. 
+            Nunc dapibus laoreet dolor nec imperdiet.</p>
+          <a class="card-button" href="#contact">Learn</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="8" y="8" width="32" height="32" rx="8"/>
+              <path d="M17 31v-8m7 8V16m7 15v-6"/>
+            </svg>
+          </span>
+          <h3>Digital Marketing</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Quisque dui mi, bibendum eu erat id, ultricies semper metus.
+             Nunc dapibus laoreet dolor nec imperdiet.</p>
+             <a class="card-button" href="#contact">Learn</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Many Blocks and Components -->
+    <section class="mx-auto grid w-[min(1000px,calc(100%-40px))] items-center gap-8 py-14 md:grid-cols-2 md:py-24">
+      <div class="order-2 md:order-1">
+        <h4 class="section-title framework-title text-left">Many Blocks and<br>Components</h4>
+        <p class="mt-5 max-w-md leading-7 text-slate-500">Startup Framework contains components
+           and complex blocks which can easily be integrated into almost any design.
+        </p>
+        <a class="mt-7 inline-flex rounded-full border border-slate-200 px-8 py-3 text-sm text-ink" href="#services">Explore</a>
+      </div>
+      <div class="chair-wrap order-1 md:order-2">
+        <!-- IMAGE 2 (wide feature): paste the pink chair image URL below. The frame keeps a 2:1 landscape ratio. -->
+        <img class="chair-image" src="img/img 3.jpg" alt="Pink chair illustration from the Figma design" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <div class="chair-fallback" hidden>
+          <span class="chair-seat"></span>
+          <span class="chair-back"></span>
+          <span class="chair-leg leg-a"></span>
+          <span class="chair-leg leg-b"></span>
+          <span class="chair-plant">✿</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Client testimonials -->
+    <section class="mx-auto w-[min(1000px,calc(100%-40px))] py-14 md:py-20">
+      <div class="mb-10 text-center">
+        <p class="section-kicker">TESTIMONIALS</p>
+        <h2 class="section-title">What Clients say about us</h2>
+      </div>
+      <div class="grid gap-x-12 gap-y-9 md:grid-cols-2">
+        <article class="testimonial">
+          <img class="testimonial-img" src="img/img 1.jpg" alt="Quote ico arin"a-hidden="true">
+          <div>
+            <p>Get a fully retina ready site when you build with Startup Framework.
+               Websites look sharper and more gorgeous on devices with retina display support
+            </p>
+            <small>RAYHAN CURRAN</small>
+          </div>
+        </article>
+        <article class="testimonial">
+          <img class="testimonial-img" src="img/img 7.jpg" alt="Quote ico arin"a-hidden="true">
+          <div>
+            <p>Startup Framework contains components and complex blocks 
+              which can easily be integrated into almost any design.
+            </p>
+            <small>GENE WHITFIELD</small>
+          </div>
+        </article>
+        <article class="testimonial">
+          <img class="testimonial-img" src="img/img 2.jpg" alt="Quote ico arin"a-hidden="true">
+          <div>
+            <p>The most important part of the Startup Framework<br> is the samples.</p>
+            <small>CLIENT</small>
+          </div>
+        </article>
+        <article class="testimonial">
+          <img class="testimonial-img" src="img/img 6.jpg" alt="Quote ico arin"a-hidden="true">
+          <div>
+            <p>We are looking forward to working with creative people and building thoughtful digital experiences.</p>
+            <small>CLIENT</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Meet the team -->
+    <section class="mx-auto w-[min(1000px,calc(100%-40px))] py-14 md:py-20">
+      <div class="mb-10 text-center">
+        <p class="section-kicker">OUR TEAM</p>
+        <h2 class="section-title">Meet The Team</h2>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="team-card">
+          <img class="team-avatar team-one" src="img/img 4.jpg" alt="Team member photo">
+          <h3>Vanessa Laird</h3>
+          <p>UI DESIGNER</p>
+          <div class="team-links">
+            <a href="#team"></a>
+            <a href="#team"></a>
+            <a href="#team"></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img class="team-avatar team-two" src="img/img 5.jpg" alt="Team member photo">
+          <h3>Creative Team</h3>
+          <p>DESIGNER</p>
+          <div class="team-links">
+            <a href="#team"></a>
+            <a href="#team"></a>
+            <a href="#team"></a>
+          </div>
+        </article>
+        <article class="team-card">
+          <img class="team-avatar team-three" src="img/img 8.jpg" alt="Team member photo">
+          <h3>Our Specialists</h3>
+          <p>DEVELOPER</p>
+          <div class="team-links">
+            <a href="#team"></a>
+            <a href="#team"></a>
+            <a href="#team"></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Subscribe অংশ -->
+<section id="contact" class="newsletter-final">
+    <div class="newsletter-final-heading">
+    <p>OUR TEAM</p>
+    <h2>Subscribe Our Newsletter</h2>
+  </div>
+  <div class="newsletter-final-art" aria-hidden="true">
+    <svg viewBox="0 0 260 250">
+      <defs>
+        <linearGradient id="mail-orange" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ff7900"/>
+          <stop offset="1" stop-color="#ff3500"/>
+        </linearGradient>
+        <linearGradient id="mail-fold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ff5c00"/>
+          <stop offset="1" stop-color="#f21c00"/>
+        </linearGradient>
+        <filter id="mail-shadow" x="-30%" y="-30%" width="160%" height="180%">
+          <feDropShadow dx="0" dy="9" stdDeviation="8"
+            flood-color="#7b4a24" flood-opacity=".18"/>
+        </filter>
+      </defs>
+
+      <ellipse cx="130" cy="230" rx="91" ry="8" fill="#e9e3dd"/>
+
+      <g filter="url(#mail-shadow)">
+        <rect x="61" y="8" width="138" height="160" rx="27" fill="#f1eff3"/>
+        <rect x="100" y="37" width="60" height="7" rx="3.5" fill="#f58a91"/>
+        <rect x="84" y="55" width="92" height="7" rx="3.5" fill="#f58a91"/>
+        <rect x="84" y="73" width="92" height="7" rx="3.5" fill="#f58a91"/>
+        <rect x="84" y="91" width="92" height="7" rx="3.5" fill="#f58a91"/>
+        <rect x="98" y="109" width="64" height="7" rx="3.5" fill="#f58a91"/>
+
+        <path d="M39 99 Q39 83 54 83 H206 Q221 83 221 99 V210 Q221 227 204 227 H56 Q39 227 39 210 Z"
+          fill="url(#mail-orange)"/>
+        <path d="M40 96 L130 157 L220 96 V210 Q220 227 203 227 H57 Q40 227 40 210 Z"
+          fill="url(#mail-fold)"/>
+        <path d="M40 96 L130 157 L40 210 Z" fill="#ff4c00" opacity=".9"/>
+        <path d="M220 96 L130 157 L220 210 Z" fill="#ff3d00" opacity=".9"/>
+        <path d="M40 210 L101 158 Q130 136 159 158 L220 210 Q220 227 203 227 H57 Q40 227 40 210 Z"
+          fill="url(#mail-orange)"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="newsletter-final-content">
+    <p class="newsletter-final-description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+    </p>
+
+    <form class="newsletter-final-form" action="#contact">
+      <label class="sr-only" for="newsletter-email">Email address</label>
+      <input
+        id="newsletter-email"
+        type="email"
+        placeholder="Your E-mail here..."
+      >
+      <button type="submit">Subscribe Our Newsletter</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="last-footer">
+  <div class="last-footer-top">
+    <a class="last-footer-logo" href="#home">
+      <span class="last-footer-mark">≡</span><span><i>pixel</i>ab</span>
+    </a>
+
+    <p class="last-footer-copyright">© 2020 Pixelab. All rights reserved.</p>
+
+    <nav class="last-footer-nav" aria-label="Footer navigation">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">How it Works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Login</a>
+    </nav>
+  </div>
+
+  <p class="last-footer-note">
+    Startup Framework contains components and complex blocks which can easily be integrated into almost any design.
+  </p>
+</footer>
+
+</body>
+</html>
